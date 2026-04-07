@@ -34,7 +34,11 @@
 
 #include "config.h"
 #include <stdarg.h>
+#ifndef _WIN32
 #include <syslog.h>
+#else
+#include "../win32/syslog.h"
+#endif
 #include <stdio.h>
 #include <sstream>
 #include <vector>
