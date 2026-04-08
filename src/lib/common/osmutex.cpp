@@ -36,7 +36,7 @@
 #include "log.h"
 #include "osmutex.h"
 
-#ifdef HAVE_PTHREAD_H
+#if defined(HAVE_PTHREAD_H) && !defined(_WIN32)
 
 #include <stdlib.h>
 #include <pthread.h>

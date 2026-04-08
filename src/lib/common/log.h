@@ -37,7 +37,11 @@
 
 #include "config.h"
 
+#ifndef _WIN32
 #include <syslog.h>
+#else
+#include "../win32/syslog.h"
+#endif
 #include <string>
 
 /* Unset this define if you don't want to log the source file name and line number */
